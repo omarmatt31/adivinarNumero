@@ -7,6 +7,7 @@
     <meta name="author" content="Omar Mattos">
     <meta name="keywords" content="Juego, adivina numero, dom, bom">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Adivinar Número</title>
 </head>
 <body>
@@ -20,9 +21,11 @@
             <div class="d-flex flex-column align-items-center">
                 <h2 class="mt-4 fw-light">Ingresá un número</h2>
                 <div class="input-group mb-3 w-25">
-                    <input type="text" class="form-control " placeholder="" aria-label="Recipient’s username" aria-describedby="button-addon2">
+                    <input type="text" class="form-control" placeholder="" aria-label="Recipient’s username" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
                 </div>
+                <div class="alert alert-success d-none">¡Adivinaste el número!</div>
+                <div class="alert alert-warning d-none">El número es mayor</div>
             </div>
         </section>
     </main>

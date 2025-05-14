@@ -5,6 +5,8 @@ const comenzarJuego = ()=>{
     console.log(numeroMagico)
     const mensajeAdivinaste = document.querySelector('.alert-success')
     const mensajeEsMenorMayor = document.querySelector('.alert-warning')
+    const numero = document.querySelector('.form-control')
+    numero.value = ""
     mensajeAdivinaste.classList.add('d-none')
     mensajeEsMenorMayor.classList.add('d-none')
 }
@@ -32,7 +34,9 @@ const adivinarNumero = ()=>{
             mensajeNoValido.textContent = "Ingrese un número valido"
         }
     }else{
-        console.log("Debe presionar el boton comenzar juego")
+        const mensajePresioneIniciar = document.querySelector('.alert-warning')
+        mensajePresioneIniciar.classList.remove('d-none')
+        mensajePresioneIniciar.textContent = "Presione el botón Comenzar el Juego"
     }
 } 
 

@@ -11,7 +11,8 @@ const comenzarJuego = ()=>{
     mensajeEsMenorMayor.classList.add('d-none')
 }
 
-const adivinarNumero = ()=>{
+const adivinarNumero = (e)=>{
+    e.preventDefault();
     const numero = parseInt(document.querySelector('.form-control').value)
     console.log(numero)
     if(numeroMagico!= undefined){
@@ -41,8 +42,7 @@ const adivinarNumero = ()=>{
 } 
 
 const btnComenzar = document.querySelector('.btn-warning')
-const btnAdivinarNumero = document.getElementById('button-addon2')
+const formAdivinarNumero = document.getElementById('formNumero')
 
 btnComenzar.addEventListener('click', comenzarJuego)
-btnAdivinarNumero.addEventListener('click', adivinarNumero)
-console.log(btnAdivinarNumero)
+formAdivinarNumero.addEventListener('submit', adivinarNumero)
